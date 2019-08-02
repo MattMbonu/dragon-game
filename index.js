@@ -1,8 +1,11 @@
-const Dragon = require("./dragon");
+const GenerationEngine = require("./GenerationEngine");
 
-const fooey = new Dragon({ birthDate: new Date(), nickName: "fooey" });
+const engine = new GenerationEngine();
 
-const baloo = new Dragon({ birthDate: new Date(), nickName: "baloo" });
-const nameLess = new Dragon();
+// const gooby = generation.newDragon();
 
-console.log(fooey, baloo, nameLess);
+// console.log("dragon", gooby);
+
+engine.start();
+
+setTimeout(() => engine.stop(), 15000);
