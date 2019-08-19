@@ -1,4 +1,4 @@
-const Generation = require("./Generation");
+const Generation = require(".");
 
 class GenerationEngine {
   constructor() {
