@@ -1,7 +1,8 @@
-const TRAITS = require("../data/traits.json");
+const TRAITS = require("../../data/traits.json");
 
 const DEFAULT_PROPS = {
   nickName: "unnamed",
+  generationId: undefined,
   get birthDate() {
     return new Date();
   },
@@ -19,10 +20,12 @@ const DEFAULT_PROPS = {
 };
 
 class Dragon {
-  constructor({ birthDate, nickName, traits } = {}) {
+  constructor({ generationId, birthDate, nickName, traits } = {}) {
+    this.generationId = generationId || DEFAULT_PROPS.generationId;
     this.birthDate = birthDate || DEFAULT_PROPS.birthDate;
     this.nickName = nickName || DEFAULT_PROPS.nickName;
     this.traits = traits || DEFAULT_PROPS.randomTraits;
+    this.dragonId = undefined;
   }
 }
 
